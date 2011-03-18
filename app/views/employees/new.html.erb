@@ -1,0 +1,5 @@
+<% form_for @employee, :html => { :multipart => true } do |form| %>
+	<%= form.text_field :name %>
+ 	<%= form.file_field :photo %>
+	<%= form.submit %>
+<% end %>

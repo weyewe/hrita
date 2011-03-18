@@ -6,6 +6,21 @@ gem 'rails', '3.0.5'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+# gem "authlogic", :git => "git://github.com/binarylogic/authlogic.git"
+
+# gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git',
+#                  :branch => 'rails3'
+
+# gem 'paperclip', "2.3.3", :git => 'git://github.com/thoughtbot/paperclip.git'
+
+# gem install paperclip -v 2.3.3
+# 
+# gem "rails", "3.0.0.beta"  
+
+gem "paperclip", "~> 2.3"
+gem "flutie", "~> 1.1" , :git => "https://github.com/thoughtbot/flutie.git"
+
+
 
 # Use unicorn as the web server
 # gem 'unicorn'

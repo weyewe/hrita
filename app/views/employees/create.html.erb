@@ -1,0 +1,17 @@
+Hehehe, a new employee is created
+
+<br />
+<% if @text %>
+	<div class="error"><%= @text %> </div>
+<% end %>
+
+
+<%= "The employee is #{@employee}"  %>
+<br />
+<%= "#{@employee.errors}"%>
+<ul>
+	<% for method in @employee.methods %>
+		<li><%=  method %></li>
+	<% end %>
+</ul>
+Name : <%= @employee.name%>
