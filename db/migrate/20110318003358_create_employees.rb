@@ -1,7 +1,7 @@
 class CreateEmployees < ActiveRecord::Migration
   def self.up
     create_table :employees do |t|
-      t.integer :department_id  
+      t.integer :department
       # an employee belongs to many departments
       # example: ComDev, Exploration, General Affair
       # question : How can we capture the high level position? 

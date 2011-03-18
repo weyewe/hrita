@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20110318022958) do
   end
 
   create_table "employees", :force => true do |t|
-    t.integer  "department_id"
+    t.integer  "department"
     t.integer  "category"
     t.integer  "nik"
     t.string   "name"

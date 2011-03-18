@@ -16,6 +16,7 @@ class EmployeesController < ApplicationController
 
   def create  
     @employee = Employee.new(params[:employee])  
+    
     if @employee.save  
       puts "Yeah saved!"
       flash[:notice] = "Successfully created user."  

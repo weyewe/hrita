@@ -38,7 +38,7 @@ class Employee < ActiveRecord::Base
   
   
   
-  belongs_to :department
+  # belongs_to :department
   has_attached_file :photo, :styles => { :small => "100x100>", :large => "300x300>" }, :processors => [:cropper]  
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h  
   after_update :reprocess_photo, :if => :cropping? 

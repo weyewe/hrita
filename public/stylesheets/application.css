@@ -1,5 +1,5 @@
 
-
+div#new_employee_form  { width : 800px;}
 div#new_employee_form h2 { text-align : center; margin-bottom: 15px;}
 div#new_employee_form  form { margin: 0 auto;}
 div#new_employee_form table { margin: 0 auto 10px; width: 500px;}
