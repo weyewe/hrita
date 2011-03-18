@@ -21,11 +21,12 @@
 	</script>
 <% end %> 
 
+
 <%= image_tag @employee.photo.url(:large), :id => "cropbox" %>  
 
 <% form_for @employee do |form| %>  
-  <% for attribute in [:crop_x, :crop_y, :crop_w, :crop_h] %>  
-    <%= form.text_field attribute, :id => attribute %>  
-  <% end %>  
-  <p><%= form.submit "Crop" %></p>  
+	<% for attribute in [:crop_x, :crop_y, :crop_w, :crop_h] %>  
+		<%= form.hidden_field attribute, :id => attribute %>  
+	<% end %>
+	<p><%= form.submit "Crop" %></p>  
 <% end %>

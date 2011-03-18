@@ -1,0 +1,8 @@
+
+
+div#new_employee_form h2 { text-align : center; margin-bottom: 15px;}
+div#new_employee_form  form { margin: 0 auto;}
+div#new_employee_form table { margin: 0 auto 10px; width: 500px;}
+div#new_employee_form table tr { height: 35px;}
+div#new_employee_form table td.label { width: 100px; font-weight: bold; }
+div#new_employee_form table td.value {   width: 400px;}
