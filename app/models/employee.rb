@@ -39,17 +39,24 @@ class Employee < ActiveRecord::Base
   
   
   # belongs_to :department
-  has_attached_file :photo, :styles => { :small => "100x100>", :large => "300x300>" }, :processors => [:cropper]  
+  
+    # the greater sign (>) instructs the scaling to preserve width:length ratio 
+    # so that there will be no distortion
+  has_attached_file :photo, 
+    :styles => { :small => "100x100>", :profile => "200x200>" , :large => "300x300>" },
+    :processors => [:cropper]  
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h  
   after_update :reprocess_photo, :if => :cropping? 
   
   
   
-  validates_attachment_presence :photo
+  # validates_attachment_presence :photo
   validates_attachment_size :photo, :less_than => 5.megabytes
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
   
-  
+  # model relation
+  belongs_to :division
+  belongs_to :position
   def cropping?  
     puts "We are in the cropping?\n"*5
     iscrop = !crop_x.blank? && !crop_y.blank? && !crop_w.blank? && !crop_h.blank?  
@@ -62,25 +69,41 @@ class Employee < ActiveRecord::Base
     @geometry[style] ||= Paperclip::Geometry.from_file(photo.path(style))  
   end
 
-  def category_selections
-    category_selections_result = {}
+  # def category_selections
+  #     category_selections_result = {}
+  #     
+  #     CATEGORIES.each do | key , values | 
+  #       for value in values 
+  #         category_selections_result[value] = key
+  #       end
+  #     end
+  #     
+  #     category_selections_result
+  #   end
+  
+
+  def self.position_selections
+    position_selections_result = {}
     
-    CATEGORIES.each do | key , values | 
-      for value in values 
-        category_selections_result[value] = key
-      end
+    Position.all.each do | position | 
+        position_selections_result[position.title] = position.id
     end
     
-    category_selections_result
+    position_selections_result
   end
   
-  def department_selections
-    department_selections_result = {}
-    DEPARTMENTS.each do |key , value| 
-      department_selections_result[value] = key
+  def self.grouped_selection_for_divisions
+    grouped_selections = {}
+    
+    Department.all.each do | department |
+      division_selections = []
+      department.divisions.each do | division |
+        division_selections << [ division.name, division.id ]
+      end
+      grouped_selections[department.name] = division_selections
     end
     
-    department_selections_result
+    grouped_selections 
   end
 
   private  

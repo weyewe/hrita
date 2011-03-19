@@ -1,6 +1,8 @@
 
 <%= link_to "New" , "#new_employee_form" , :id=>"new_employee"%>
 
+
+<%#= render :partial => "new_employee_form" %>
 <div id="new_employee_form_wrapper" class="hidden">
 	
 	<div id="new_employee_form">
@@ -28,33 +30,37 @@
 				
 				<tr>
 					<td class="label">
-						<%= form.label :department%>
+						<%= form.label :division_id%>
 					</td>
 					<td class="value">
-						<%= form.select(:department , @new_employee.department_selections , {:prompt => "Pilih Department"}) %>
+						<%#= form.select(:division_id , @new_employee.department_selections , {:prompt => "Pilih Divisi"}) %>
 						<!-- see this shite http://railsforum.com/viewtopic.php?id=15326 
 						http://shiningthrough.co.uk/Select-helper-methods-in-Ruby-on-Rails
 						-->
+						
+						<%= form.select(:division_id, grouped_options_for_select(Employee.grouped_selection_for_divisions) )%>
+						
+			
+						
 					</td>
 				</tr>
+				
+	
+				
 				
 				
 				<tr>
 					<td class="label">
-						<%= form.label :category%>
+						<%= form.label :position_id%>
 					</td>
 					<td class="value">
-						<%= form.select(:category , @new_employee.category_selections , {:prompt => "Pilih Jabatan"}) %>
+						<%= form.select(:position_id , Employee.position_selections , {:prompt => "Pilih Jabatan"}) %>
 						<!-- see this shite http://railsforum.com/viewtopic.php?id=15326 
 						http://shiningthrough.co.uk/Select-helper-methods-in-Ruby-on-Rails
 						-->
 					</td>
 				</tr>
 				
-				
-				
-				
-			
 				<tr>
 					<td class="label">
 						<%= form.label :photo%>
@@ -64,13 +70,15 @@
 					</td>
 				</tr>
 				
-				<!-- LIMIIIIT -->
-			
-			
-
+				<tr>
+					<td class="label">
+						<%= form.label :starting_date%>
+					</td>
+					<td class="value">
+						<%= form.date_select :starting_date %>
+					</td>
+				</tr>
 			</table>
-		
-
 			<%= form.submit %>
 		<% end %>
 	
@@ -80,8 +88,11 @@
 <ul>
 	<% for employee in @employees %>
 		<div>
-			<%= image_tag employee.photo.url(:small) %>
-			<%= "name #{employee.name}"%>
+			<% link_to employee_path(employee)  do %>
+				<%= image_tag employee.photo.url(:small) %>
+			<% end %>
+			
+			<%= link_to "#{employee.name}", employee_path(employee)%>
 		</div>
 	<% end %>
 </ul>

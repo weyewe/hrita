@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <title>Hrita</title>
-  <%= stylesheet_link_tag :flutie, 'boilerplate', 'jquery.fancybox-1.3.4' , 'application' %>
+  <%= stylesheet_link_tag :flutie, 'boilerplate', 'base','jquery.fancybox-1.3.4' , 'application' %>
 	<%#= stylesheet_link_tag :flutie, 'admin', :cache => true %>
 	<%= javascript_include_tag 'jquery.1.5.1.min', "jquery.fancybox-1.3.4.pack" %> 
   <%= csrf_meta_tag %>
@@ -11,6 +11,28 @@
 </head>
 
 <body>
-	<%= yield %>
+	<div class="faux-wrapper">
+		<div class="header">
+			<a id="logo" href="/">Harita</a>
+			
+			<div class="user-info">
+				Operator Name • <a href="/">Logout</a>
+			</div>
+		</div><!-- header -->
+		
+		<div class="nav-bar blue-bar">
+			<ul class="menu clearfix">
+				<li>
+					<a href="#">Attendance</a>
+				</li
+				
+				<li>
+					<a href="#">History</a>
+				</li
+			</ul> 
+		</div><!-- nav-bar -->
+	
+		<%= yield %>
+	</div><!-- faux-wrapper -- >
 </body>
 </html>

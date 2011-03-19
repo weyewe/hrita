@@ -14,17 +14,35 @@ class EmployeesController < ApplicationController
     @employee = Employee.find_by_id( params[:id]  ) 
   end
 
+  # def create  
+  #   @employee = Employee.new(params[:employee])  
+  #   
+  #   if @employee.save  
+  #     puts "Yeah saved!"
+  #     flash[:notice] = "Successfully created user."  
+  #     if params[:employee][:photo].blank?  
+  #       redirect_to @employee  
+  #     else  
+  #       render :action => 'crop'  
+  #     end  
+  #   else  
+  #     puts "Save is failing"
+  #     render :action => 'new'  
+  #   end  
+  # end
+  
   def create  
     @employee = Employee.new(params[:employee])  
     
     if @employee.save  
       puts "Yeah saved!"
       flash[:notice] = "Successfully created user."  
-      if params[:employee][:photo].blank?  
-        redirect_to @employee  
-      else  
-        render :action => 'crop'  
-      end  
+      # if params[:employee][:photo].blank?  
+      #   redirect_to @employee  
+      # else  
+      #   render :action => 'crop'  
+      # end  
+      redirect_to @employee  
     else  
       puts "Save is failing"
       render :action => 'new'  

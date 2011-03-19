@@ -1,8 +1,33 @@
+/* Overall Layout */
+a { color: #214990;   text-decoration: none; }
+.faux-wrapper {background-color: white; margin-left: auto; margin-right: auto; padding-left: 10px; padding-right: 10px;width: 980px;}
+	div.header { padding: 20px 0 0;   position: relative;}
+	div.header #logo {padding-bottom: 16px;  position: relative; }
+		a#logo {  display: block;  height: 34px; position: relative;  text-indent: -999em; width: 173px; }
+	div.header div.user-info { font-size: 12px; position: absolute; right: 11px; text-align: right;  top: 20px; }
+					div.nav-bar { background-color: #214990; background-position: left bottom;  color: #FFFFFF;  font-size: 16px; height: 35px;  line-height: 35px;  margin-bottom: 20px; padding: 0 20px;}
+					div.nav-bar ul.menu { list-style-type: none;  position: absolute;  right: 20px;  top: 12px; width: 394px;}
+				 	div.nav-bar ul.menu li { background: none repeat scroll 0 0 transparent;   border: medium none;  float: right;  }
+					div.nav-bar ul.menu li a { cursor: pointer; display: block;  height: 16px; margin-left: 18px; color:white;}
+					div.blue-bar { color: white; font-size: 16px; height: 40px;  letter-spacing: -0.01em;line-height: 40px; padding-left: 16px; position: relative}
 
+/* New Employee Creation */
 div#new_employee_form  { width : 800px;}
 div#new_employee_form h2 { text-align : center; margin-bottom: 15px;}
 div#new_employee_form  form { margin: 0 auto;}
+div#new_employee_form  form	input#employee_submit { font-size:14px; height:30px; margin-left: 250px;}
 div#new_employee_form table { margin: 0 auto 10px; width: 500px;}
 div#new_employee_form table tr { height: 35px;}
 div#new_employee_form table td.label { width: 100px; font-weight: bold; }
 div#new_employee_form table td.value {   width: 400px;}
+div#new_employee_form table td.value select { font-size: 14px;}
+	
+/* Employee Profile */
+
+div.photo-column { height: 213px;  width: 212px; float:left;}
+div.photo-column img.profile-pic { margin: 0px 0 0 6px; display : block;}
+	
+div.personal-info-column  { float: left; width: 500px;}
+div.personal-info-column h2 { font-size: 24px; margin-bottom: 20px;}
+div.personal-info-column  table { width: 400px; font-size:14px; margin-left: 10px;}
+div.personal-info-column  table  td.label { width: 95px; color: rgb(105,105,105);}
