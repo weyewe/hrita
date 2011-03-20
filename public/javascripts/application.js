@@ -14,7 +14,3 @@ jQuery(function() {
 
 
 
-
-
-<a title="Lorem ipsum dolor sit amet" href="#inline1" id="various1">Inline - auto detect width / height</a>
-

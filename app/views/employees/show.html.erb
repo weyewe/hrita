@@ -1,59 +1,14 @@
 
 
 
+<%= render :partial => "brief_profile", :locals => { :employee => @employee } %>
 
-<div class="profile-content clearfix">
-	<div class="photo-column">
-		<%= image_tag @employee.photo.url(:profile) , :class => "profile-pic"%>
-	</div>
+
+<div class="profile-content-details clearfix">
+	<div class="main-profile-content">
+	</div><!-- main-profile-content -->
 	
-	<div class="personal-info-column">
-		<h2><%= @employee.name %></h2>
-		<table>
-			<tr>
-				<td class="label">
-					NIK
-				</td>
-				<td class="value">
-					<%= @employee.nik %>
-				</td>
-			</tr>
-			<tr>
-				<td class="label">
-					Department
-				</td>
-				<td class="value">
-					<%= @employee.division.department.name %>
-				</td>
-			</tr>
-			
-			<tr>
-				<td class="label">
-					Division
-				</td>
-				<td class="value">
-					<%= @employee.division.name %>
-				</td>
-			</tr>
-			
-			<tr>
-				<td class="label">
-					Jabatan
-				</td>
-				<td class="value">
-					<%= @employee.position.title %>
-				</td>
-			</tr>
-			
-			<tr>
-				<td class="label">
-					Start Date
-				</td>
-				<td class="value">
-					<%= @employee.starting_date %>
-				</td>
-			</tr>
+	<div class="sidebar-menu wd">
+	</div><!-- sidebar-menu wd -->
 	
-		</table>
-	</div>
-</div>
+</div><!-- profile-content-details -->
