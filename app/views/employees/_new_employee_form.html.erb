@@ -1,8 +1,3 @@
-
-<%= link_to "New" , "#new_employee_form" , :id=>"new_employee"%>
-
-
-<%#= render :partial => "new_employee_form" %>
 <div id="new_employee_form_wrapper" class="hidden">
 	
 	<div id="new_employee_form">
@@ -85,16 +80,3 @@
 	
 	</div> <!-- #new_employee_form -->
 </div>  <!-- #new_employee_form_wrapper -->
-
-
-<ul>
-	<% for employee in @employees %>
-		<div>
-			<% link_to employee_path(employee)  do %>
-				<%= image_tag employee.photo.url(:small) %>
-			<% end %>
-			
-			<%= link_to "#{employee.name}", employee_path(employee)%>
-		</div>
-	<% end %>
-</ul>

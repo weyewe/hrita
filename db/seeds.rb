@@ -36,3 +36,13 @@ end
 # # 4 = SuperIntendent
 # # 5 = Deputy GM  / Manager
 # # 6 = GM
+
+
+# Create basic user
+User.create :email => "bambang@haritanickel.com", 
+            :password => "bambang1234",
+            :password_confirmation => "bambang1234"
+            
+User.create :email => "hermawan@haritanickel.com", 
+            :password => "hermawan1234",
+            :password_confirmation => "hermawan1234"
