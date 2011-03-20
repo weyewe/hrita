@@ -1,5 +1,5 @@
 
-<%= link_to "New" , "#new_employee_form" , :id=>"new_employee"%>
+<%= link_to "New Employee" , "#new_employee_form" , :id=>"new_employee"%>
 
 
 <%#= render :partial => "new_employee_form" %>
@@ -87,7 +87,7 @@
 </div>  <!-- #new_employee_form_wrapper -->
 
 
-<ul>
+<ul id="employee_feed">
 	<% for employee in @employees %>
 		<div>
 			<% link_to employee_path(employee)  do %>

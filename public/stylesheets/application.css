@@ -1,6 +1,7 @@
 /* Overall Layout */
 a { color: #214990;   text-decoration: none; }
 .faux-wrapper {background-color: white; margin-left: auto; margin-right: auto; padding-left: 10px; padding-right: 10px;width: 980px;}
+
 	div.header { padding: 20px 0 0;   position: relative;}
 	div.header #logo {padding-bottom: 16px;  position: relative; }
 		a#logo {  display: block;  height: 34px; position: relative;  text-indent: -999em; width: 173px; }
@@ -10,6 +11,11 @@ a { color: #214990;   text-decoration: none; }
 				 	div.nav-bar ul.menu li { background: none repeat scroll 0 0 transparent;   border: medium none;  float: right;  }
 					div.nav-bar ul.menu li a { cursor: pointer; display: block;  height: 16px; margin-left: 18px; color:white;}
 					div.blue-bar { color: white; font-size: 16px; height: 40px;  letter-spacing: -0.01em;line-height: 40px; padding-left: 16px; position: relative}
+
+/* Employee Feed */
+a#new_employee { font-size: 20px; background-color: rgb(20,200,20);}
+ul#employee_feed { margin-top: 20px;}
+
 
 /* New Employee Creation */
 div#new_employee_form  { width : 800px;}
@@ -30,4 +36,51 @@ div.photo-column img.profile-pic { margin: 0px 0 0 6px; display : block;}
 div.personal-info-column  { float: left; width: 500px;}
 div.personal-info-column h2 { font-size: 24px; margin-bottom: 20px;}
 div.personal-info-column  table { width: 400px; font-size:14px; margin-left: 10px;}
+div.personal-info-column  table tr { height: 20px;}
 div.personal-info-column  table  td.label { width: 95px; color: rgb(105,105,105);}
+
+
+div.profile-content-details { margin-top: 20px; }
+.faux-wrapper .profile-content-details .main-profile-content { width: 660px; float:left;}
+.faux-wrapper .profile-content-details .main-profile-content .main-profile-header { position : relative;}
+div.grey-bar { color: #323232;  font-size: 16px; height: 40px; letter-spacing: -0.01em; line-height: 40px; padding-left: 16px;  position: relative;  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8); background-color: rgb(200,200,200);}
+.sub-content { padding: 20px 16px; }
+
+.faux-wrapper .profile-content-details .main-profile-content .item-container {     padding-bottom: 20px;  border-bottom: 1px solid rgb(200,200,200);}
+.faux-wrapper .profile-content-details .main-profile-content .item-container .item-detail { background-position: 0 0;}  padding-bottom: 10px;    padding-left: 6px; }
+.faux-wrapper .profile-content-details .main-profile-content .item-container .item-detail ol {   padding-top: 0; }
+.faux-wrapper .profile-content-details .main-profile-content .item-container .item-detail ol { color: white;  font-weight: bold;  list-style-position: outside;  margin-left: 20px; padding-top: 10px;}
+.faux-wrapper .profile-content-details .main-profile-content .item-container .item-detail ol li { padding-left: 14px; }
+.faux-wrapper .profile-content-details .main-profile-content .item-container .item-detail ol li .wrapper, 
+		.faux-wrapper .profile-content-details .main-profile-content .item-container div.entry {  position: relative; }
+		.faux-wrapper .profile-content-details .main-profile-content .item-container .item-detail ol li .wrapper, .faux-wrapper .profile-content-details .main-profile-content .item-container div.entry {
+		    line-height: 1.6;
+		}
+		.faux-wrapper .profile-content-details .main-profile-content .item-container .item-detail ol li .wrapper, .faux-wrapper .profile-content-details .main-profile-content .item-container div.entry {
+		    line-height: 1.6;
+		}
+		.faux-wrapper .profile-content-details .main-profile-content .item-container .item-detail ol li .wrapper {
+		    color: #000000;
+		    font-style: normal;
+		    font-weight: normal;
+		}
+		
+		.faux-wrapper .profile-content-details .main-profile-content .item-container .item-detail ol li .wrapper .headline {
+		    font-size: 14px;
+		    font-weight: bold;
+		    margin-bottom: 10px;
+		}
+		
+		.faux-wrapper .profile-content-details .main-profile-content .item-container .item-detail ol li .wrapper .summary-content {
+		    line-height: 22px;
+		}
+		
+		.faux-wrapper .profile-content-details .main-profile-content .item-container .item-detail ol li .wrapper, .faux-wrapper .profile-content-details .main-profile-content .item-container div.entry {
+		    position: relative;
+		}
+		
+		.faux-wrapper .profile-content-details .main-profile-content .item-container div.entry {
+		    border-top: 1px dotted #CBCBCB;
+		    padding: 10px 0;
+			line-height: 1.6;
+		}
