@@ -25,6 +25,9 @@ Hrita::Application.configure do
   
   Paperclip.options[:command_path] = "/opt/local/bin/"
   
+  # /config/environments/development.rb
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
   
   
 end
