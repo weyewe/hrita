@@ -30,6 +30,7 @@ div#new_employee_form table td.value select { font-size: 14px;}
 	
 /* Employee Profile */
 
+/* Essential Section */
 div.photo-column { height: 213px;  width: 212px; float:left;}
 div.photo-column img.profile-pic { margin: 0px 0 0 6px; display : block;}
 	
@@ -40,6 +41,7 @@ div.personal-info-column  table tr { height: 20px;}
 div.personal-info-column  table  td.label { width: 95px; color: rgb(105,105,105);}
 
 
+/* Employment History */
 div.profile-content-details { margin-top: 20px; }
 .faux-wrapper .profile-content-details .main-profile-content { width: 660px; float:left;}
 .faux-wrapper .profile-content-details .main-profile-content .main-profile-header { position : relative;}
@@ -84,3 +86,23 @@ div.grey-bar { color: #323232;  font-size: 16px; height: 40px; letter-spacing: -
 		    padding: 10px 0;
 			line-height: 1.6;
 		}
+
+/* Important Statistics */
+
+.faux-wrapper .profile-content-details .sidebar-menu { background: none repeat scroll 0 0 transparent; border: medium none;   margin-left: 20px; float:left; width : 300px;}
+
+	div.grey-bar {
+/*	    background: url("../images/grey_bar_background.png?1279039882") repeat-x scroll 0 0 transparent;*/
+	    color: #323232;
+	    font-size: 16px;
+	    height: 40px;
+	    letter-spacing: -0.01em;
+	    line-height: 40px;
+	    padding-left: 16px;
+	    position: relative;
+	    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+	}
+
+	div.social-media-resource {
+	    margin-bottom: 20px;
+	}
